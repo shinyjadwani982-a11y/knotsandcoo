@@ -27,18 +27,18 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#F5EFE6] border-t border-[#E6DCD0] text-[#554A42]">
+    <footer className="bg-[#382820] border-t border-[#4D3A31] text-white">
       {/* Top Newsletter / Warm Community Strip */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-[#EAE0D3]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-b border-[#4D3A31]">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <div className="md:col-span-6">
-            <span className="text-xs uppercase tracking-widest text-[#935D4A] font-semibold">
+            <span className="text-xs uppercase tracking-widest text-[#F6D96B] font-bold">
               The Knots Club
             </span>
-            <h3 className="text-2xl font-serif font-medium text-[#26211E] mt-1">
+            <h3 className="text-2xl font-serif font-medium text-white mt-1">
               Drop knots, not spam ♡
             </h3>
-            <p className="text-xs text-[#7A6C60] mt-1">
+            <p className="text-xs text-white/80 mt-1">
               Be the first to know about tiny seasonal drops, new yarn shades, and workshop stories.
             </p>
           </div>
@@ -51,11 +51,11 @@ export const Footer: React.FC<FooterProps> = ({
                 placeholder="your.email@aesthetic.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-white border border-[#DDD3C6] rounded-xl px-4 py-2.5 text-xs text-[#2D2825] placeholder:text-[#A99A8E] focus:outline-none focus:border-[#8F5543]"
+                className="flex-1 bg-[#4D3A31] border border-[#614B40] rounded-xl px-4 py-2.5 text-xs text-white placeholder:text-white/50 focus:outline-none focus:border-[#F6D96B]"
               />
               <button
                 type="submit"
-                className="bg-[#2D2825] hover:bg-[#433B37] text-white px-5 py-2.5 rounded-xl text-xs font-medium transition-all flex items-center gap-1.5 shrink-0"
+                className="bg-[#C83D46] hover:bg-[#A92D35] text-white px-5 py-2.5 rounded-xl text-xs font-semibold tracking-wide transition-all flex items-center gap-1.5 shrink-0 shadow-sm"
               >
                 {subscribed ? (
                   <>
@@ -79,27 +79,27 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand Manifesto */}
           <div className="md:col-span-5">
-            <span className="text-2xl font-serif font-medium text-[#26211E] tracking-tight">
+            <span className="text-2xl font-serif font-medium text-white tracking-tight">
               Knots &amp; Co.
             </span>
-            <p className="mt-3 text-sm text-[#665A50] leading-relaxed max-w-sm">
+            <p className="mt-3 text-sm text-white/80 leading-relaxed max-w-sm">
               We take ordinary, familiar everyday objects and give them personality, emotion, and individuality through handmade crochet.
             </p>
-            <p className="mt-4 text-xs font-serif italic text-[#8C5241]">
+            <p className="mt-4 text-xs font-serif italic text-[#F6D96B]">
               Ordinary things. Personal meanings. Made by hand.
             </p>
           </div>
 
           {/* Navigation Links */}
           <div className="md:col-span-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#2D2825] mb-3">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#F6D96B] mb-3">
               Explore
             </p>
-            <ul className="space-y-2 text-xs text-[#6B5D51]">
+            <ul className="space-y-2 text-xs text-white/80">
               <li>
                 <button
                   onClick={() => onNavigateSection('catalog')}
-                  className="hover:text-[#2D2825] transition-colors"
+                  className="hover:text-[#F6D96B] transition-colors"
                 >
                   All Creations
                 </button>
@@ -107,7 +107,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={() => onNavigateSection('personalities')}
-                  className="hover:text-[#2D2825] transition-colors"
+                  className="hover:text-[#F6D96B] transition-colors"
                 >
                   Shop by Personality
                 </button>
@@ -115,7 +115,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={onOpenQuiz}
-                  className="hover:text-[#2D2825] transition-colors"
+                  className="hover:text-[#F6D96B] transition-colors"
                 >
                   Personality Quiz
                 </button>
@@ -123,7 +123,7 @@ export const Footer: React.FC<FooterProps> = ({
               <li>
                 <button
                   onClick={onOpenCustomStudio}
-                  className="hover:text-[#2D2825] transition-colors"
+                  className="hover:text-[#F6D96B] transition-colors"
                 >
                   Make It Yours
                 </button>
@@ -133,36 +133,36 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Brand Philosophy */}
           <div className="md:col-span-2">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#2D2825] mb-3">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#F6D96B] mb-3">
               About
             </p>
-            <ul className="space-y-2 text-xs text-[#6B5D51]">
+            <ul className="space-y-2 text-xs text-white/80">
               <li>
                 <button
                   onClick={() => onNavigateSection('our-story')}
-                  className="hover:text-[#2D2825] transition-colors"
+                  className="hover:text-[#F6D96B] transition-colors"
                 >
                   Our Story
                 </button>
               </li>
               <li>
-                <span className="text-[#8C7A6B]">Artisan Collective</span>
+                <span className="text-white/60">Artisan Collective</span>
               </li>
               <li>
-                <span className="text-[#8C7A6B]">Slow Crafting Ethos</span>
+                <span className="text-white/60">Slow Crafting Ethos</span>
               </li>
               <li>
-                <span className="text-[#8C7A6B]">Yarn Care Guide</span>
+                <span className="text-white/60">Yarn Care Guide</span>
               </li>
             </ul>
           </div>
 
           {/* Little Care Notes */}
           <div className="md:col-span-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[#2D2825] mb-3">
+            <p className="text-xs font-bold uppercase tracking-wider text-[#A8B99A] mb-3">
               Handmade Promise
             </p>
-            <div className="p-4 rounded-xl bg-white/60 border border-[#E8DFD3] text-xs text-[#6B5E52] space-y-1.5">
+            <div className="p-4 rounded-xl bg-[#4D3A31]/70 border border-[#614B40] text-xs text-white/90 space-y-1.5">
               <p>✨ 100% Combed milk-cotton</p>
               <p>🌸 Stems &amp; blooms that never wilt</p>
               <p>💌 Complimentary handwritten note</p>
@@ -171,9 +171,9 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-12 pt-6 border-t border-[#EAE0D3] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#8C7B6D] gap-2">
+        <div className="mt-12 pt-6 border-t border-[#4D3A31] flex flex-col sm:flex-row items-center justify-between text-[11px] text-white/60 gap-2">
           <p>© {new Date().getFullYear()} Knots &amp; Co. Studio. Hand-knotted with patience &amp; love.</p>
-          <p className="font-script text-sm text-[#8C5847]">for things that deserve a little more personality ♡</p>
+          <p className="font-script text-base text-[#F7E3E3]">for things that deserve a little more personality ♡</p>
         </div>
       </div>
     </footer>

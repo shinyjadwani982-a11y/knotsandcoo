@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream: #FFF8EF;
+  --color-cream-card: #FFFAF3;
+  --color-cherry: #C83D46;
+  --color-cherry-dark: #A92D35;
+  --color-cherry-light: #FDF0F1;
+  --color-butter: #F6D96B;
+  --color-butter-hover: #EBCC57;
+  --color-butter-light: #FEF9E7;
+  --color-blush: #F7E3E3;
+  --color-blush-light: #FDF6F6;
+  --color-sage: #A8B99A;
+  --color-sage-dark: #586B49;
+  --color-sage-light: #F0F5ED;
+  --color-chocolate: #382820;
+  --color-chocolate-muted: #6B554B;
+  --color-chocolate-light: #8E786E;
+}
+
 @layer base {
   :root {
     --font-serif: 'Fraunces', Georgia, serif;
@@ -10,6 +29,11 @@
   html {
     scroll-behavior: smooth;
     font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: #FFF8EF;
+    color: #382820;
   }
 
   h1, h2, h3, .font-display {

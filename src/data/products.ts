@@ -387,28 +387,28 @@ export const INSTAGRAM_POSTS = [
     id: 'ugc-1',
     handle: '@avani.reads',
     caption: 'Current read accompanied by my @knotsandco matcha sprout bookmark 🌱✨ never losing my place again',
-    image: '/assets/images/product_matcha_bookmark_1792146780908.jpg',
+    image: '/images/lifestyle-bookmark.png',
     productTag: 'Matcha Sprout Book Buddy'
   },
   {
     id: 'ugc-2',
     handle: '@kavya_sunshine',
     caption: 'My work from home setup got 1000% warmer thanks to this little DHOOP sunflower companion 🌻💛',
-    image: '/assets/images/product_sunflower_dhoop_1792146779590.jpg',
+    image: '/images/lifestyle-sunflower.png',
     productTag: 'DHOOP Sunflower'
   },
   {
     id: 'ugc-3',
     handle: '@mira_totes',
     caption: 'Bag charms are my love language. Spotted this strawberry charm on my daily commute 🍓🍓',
-    image: '/assets/images/product_strawberry_charm_1792146744728.jpg',
+    image: '/images/lifestyle-keychain.png',
     productTag: 'Strawberry & Blossom Charm'
   },
   {
     id: 'ugc-4',
     handle: '@isha.creates',
     caption: 'Unboxing the daisy bouquet. Flowers that don’t wilt are officially the only flowers I accept now 🌼🌼',
-    image: '/assets/images/product_daisy_bouquet_1792146742734.jpg',
+    image: '/images/lifestyle-bouquet.png',
     productTag: 'Daisy Bouquet (5-Stem)'
   }
 ];

@@ -68,7 +68,11 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className={`w-full h-full ${
+                    product.id === 'crochet-market-tote' || product.categorySlug === 'bags'
+                      ? 'object-contain object-center p-4 mix-blend-multiply'
+                      : 'object-cover'
+                  }`}
                   referrerPolicy="no-referrer"
                 />
                 <button

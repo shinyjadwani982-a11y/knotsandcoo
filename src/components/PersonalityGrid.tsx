@@ -12,17 +12,17 @@ export const PersonalityGrid: React.FC<PersonalityGridProps> = ({
   onSelectPersonality
 }) => {
   return (
-    <section id="personalities" className="py-16 sm:py-20 bg-[#FAF7F2]">
+    <section id="personalities" className="py-16 sm:py-20 bg-[#F0F5ED] border-b border-[#DFE8DC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
           <div>
-            <span className="text-xs uppercase tracking-widest text-[#935D4A] font-semibold">
+            <span className="text-xs uppercase tracking-widest text-[#586B49] font-bold">
               The Personality Shop
             </span>
-            <h2 className="mt-2 text-3xl sm:text-4xl font-display font-medium text-[#26211E] tracking-tight">
+            <h2 className="mt-2 text-3xl sm:text-4xl font-display font-medium text-[#382820] tracking-tight">
               What’s your kind of little thing?
             </h2>
-            <p className="mt-2 text-sm sm:text-base text-[#685C52]">
+            <p className="mt-2 text-sm sm:text-base text-[#382820]/80">
               Shopping by identity rather than boring inventory. Choose who you are today.
             </p>
           </div>
@@ -30,7 +30,7 @@ export const PersonalityGrid: React.FC<PersonalityGridProps> = ({
           {activePersonality && (
             <button
               onClick={() => onSelectPersonality(null)}
-              className="mt-4 md:mt-0 text-xs text-[#8C5847] hover:text-[#5E3427] font-medium underline underline-offset-4 self-start"
+              className="mt-4 md:mt-0 text-xs text-[#C83D46] hover:text-[#A92D35] font-semibold underline underline-offset-4 self-start"
             >
               Reset personality filter (Showing all)
             </button>
@@ -45,10 +45,10 @@ export const PersonalityGrid: React.FC<PersonalityGridProps> = ({
               <div
                 key={arch.id}
                 onClick={() => onSelectPersonality(isSelected ? null : arch.title)}
-                className={`relative rounded-2xl p-6 sm:p-7 transition-all cursor-pointer text-left flex flex-col justify-between border ${
+                className={`relative rounded-2xl p-6 sm:p-7 transition-all duration-300 cursor-pointer text-left flex flex-col justify-between border ${
                   isSelected
-                    ? 'ring-2 ring-[#7B4636] shadow-md border-transparent bg-white'
-                    : 'bg-white/70 hover:bg-white border-[#E6DDD0] hover:border-[#D1C3B4] shadow-2xs'
+                    ? 'ring-2 ring-[#C83D46] shadow-md border-transparent bg-white'
+                    : 'bg-white hover:bg-[#FFFAF3] border-[#DFE8DC] hover:border-[#A8B99A] shadow-xs hover:shadow-md hover:-translate-y-1'
                 }`}
                 style={{ backgroundColor: isSelected ? '#FFFFFF' : undefined }}
               >
@@ -58,31 +58,31 @@ export const PersonalityGrid: React.FC<PersonalityGridProps> = ({
                       {arch.emoji}
                     </span>
                     {isSelected && (
-                      <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-[#7B4636] bg-[#F7EBE8] px-2.5 py-1 rounded-full">
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-white bg-[#C83D46] px-2.5 py-1 rounded-full shadow-xs">
                         <Check className="w-3 h-3" />
                         Selected
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-serif font-medium text-[#2D2825] tracking-tight">
+                  <h3 className="text-xl font-serif font-medium text-[#382820] tracking-tight">
                     {arch.title}
                   </h3>
 
-                  <p className="text-xs font-medium text-[#8F5B49] mt-1 mb-3">
+                  <p className="text-xs font-semibold text-[#C83D46] mt-1 mb-3">
                     {arch.tagline}
                   </p>
 
-                  <p className="text-xs text-[#63574D] leading-relaxed">
+                  <p className="text-xs text-[#382820]/75 leading-relaxed">
                     {arch.description}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#F0E8DC] flex items-center justify-between">
-                  <span className="text-[11px] text-[#8C7B6D] font-medium">
+                <div className="mt-6 pt-4 border-t border-[#F0EBE1] flex items-center justify-between">
+                  <span className="text-[11px] text-[#586B49] font-semibold">
                     {arch.matchingProductIds.length} curated pieces
                   </span>
-                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#2D2825] group-hover:text-[#8C5847]">
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#C83D46] hover:text-[#A92D35]">
                     <span>{isSelected ? 'Viewing' : 'Explore this vibe'}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </span>

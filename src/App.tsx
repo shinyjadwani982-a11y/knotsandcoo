@@ -194,11 +194,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#2D2825]">
+    <div className="min-h-screen flex flex-col bg-[#FFF8EF] text-[#382820]">
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-[#2D2825] text-white px-4 py-3 rounded-2xl text-xs font-medium shadow-xl border border-[#483F39] flex items-center gap-2 animate-bounce">
-          <Sparkles className="w-3.5 h-3.5 text-[#EAB5A8]" />
+        <div className="fixed bottom-6 right-6 z-50 bg-[#C83D46] text-white px-4 py-3 rounded-2xl text-xs font-semibold shadow-xl border border-[#A92D35] flex items-center gap-2 animate-bounce">
+          <Sparkles className="w-3.5 h-3.5 text-[#F6D96B]" />
           <span>{toastMessage}</span>
         </div>
       )}
@@ -245,31 +245,31 @@ export default function App() {
         />
 
         {/* Section 4 & 5: Catalog & Bestsellers */}
-        <section id="catalog" className="py-16 sm:py-20 bg-[#FAF7F2] scroll-mt-20">
+        <section id="catalog" className="py-16 sm:py-20 bg-[#FFF8EF] border-b border-[#EADFD0] scroll-mt-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl mb-8">
-              <span className="text-xs uppercase tracking-widest text-[#935D4A] font-semibold">
+              <span className="text-xs uppercase tracking-widest text-[#C83D46] font-bold">
                 Our Handmade Catalog
               </span>
-              <h2 className="mt-1 text-3xl sm:text-4xl font-display font-medium text-[#26211E] tracking-tight">
+              <h2 className="mt-1 text-3xl sm:text-4xl font-display font-medium text-[#382820] tracking-tight">
                 The ones everyone keeps knotting about.
               </h2>
-              <p className="mt-2 text-sm sm:text-base text-[#6B5E52]">
+              <p className="mt-2 text-sm sm:text-base text-[#382820]/80">
                 Every single piece is looped slowly by hand using premium combed milk cotton yarn.
               </p>
             </div>
 
             {/* Active Filter Indicators */}
             {(selectedPersonality || selectedMood || searchQuery) && (
-              <div className="mb-6 flex flex-wrap items-center gap-2 p-3 rounded-2xl bg-[#F4EDE4] border border-[#E5DAD0] text-xs">
-                <span className="text-[#7A6B5F] font-medium">Filtering by:</span>
+              <div className="mb-6 flex flex-wrap items-center gap-2 p-3 rounded-2xl bg-[#F7E3E3]/60 border border-[#F2C7C7] text-xs">
+                <span className="text-[#382820] font-semibold">Filtering by:</span>
 
                 {selectedPersonality && (
-                  <span className="bg-white text-[#8C4E3C] font-semibold px-2.5 py-1 rounded-full border border-[#DFCFC2] flex items-center gap-1.5">
+                  <span className="bg-white text-[#C83D46] font-bold px-2.5 py-1 rounded-full border border-[#F2C7C7] flex items-center gap-1.5 shadow-2xs">
                     <span>{selectedPersonality}</span>
                     <button
                       onClick={() => setSelectedPersonality(null)}
-                      className="text-[#9E8E82] hover:text-[#2D2825]"
+                      className="text-[#C83D46] hover:text-[#A92D35]"
                     >
                       ×
                     </button>
@@ -277,11 +277,11 @@ export default function App() {
                 )}
 
                 {selectedMood && (
-                  <span className="bg-white text-[#8C4E3C] font-semibold px-2.5 py-1 rounded-full border border-[#DFCFC2] flex items-center gap-1.5">
+                  <span className="bg-white text-[#C83D46] font-bold px-2.5 py-1 rounded-full border border-[#F2C7C7] flex items-center gap-1.5 shadow-2xs">
                     <span>{selectedMood}</span>
                     <button
                       onClick={() => setSelectedMood(null)}
-                      className="text-[#9E8E82] hover:text-[#2D2825]"
+                      className="text-[#C83D46] hover:text-[#A92D35]"
                     >
                       ×
                     </button>
@@ -289,11 +289,11 @@ export default function App() {
                 )}
 
                 {searchQuery && (
-                  <span className="bg-white text-[#2D2825] font-medium px-2.5 py-1 rounded-full border border-[#DFCFC2] flex items-center gap-1.5">
+                  <span className="bg-white text-[#382820] font-semibold px-2.5 py-1 rounded-full border border-[#EADFD0] flex items-center gap-1.5 shadow-2xs">
                     <span>Search: "{searchQuery}"</span>
                     <button
                       onClick={() => setSearchQuery('')}
-                      className="text-[#9E8E82] hover:text-[#2D2825]"
+                      className="text-[#8E786E] hover:text-[#382820]"
                     >
                       ×
                     </button>
@@ -307,14 +307,14 @@ export default function App() {
                     setSearchQuery('');
                     setSelectedCategory('all');
                   }}
-                  className="text-xs text-[#8C5847] hover:underline font-medium ml-auto"
+                  className="text-xs text-[#C83D46] hover:underline font-bold ml-auto"
                 >
                   Clear all filters
                 </button>
               </div>
             )}
 
-            {/* Reimagined Category Tabs (Functional Button Controls with Clean Styling) */}
+            {/* Reimagined Category Tabs (Cherry Red Active, Butter Yellow Hover) */}
             <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 scrollbar-none text-xs">
               {CATEGORIES.map((cat) => {
                 const isActive = selectedCategory === cat.id;
@@ -322,10 +322,10 @@ export default function App() {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-4 py-2 rounded-full whitespace-nowrap shrink-0 transition-all font-medium ${
+                    className={`px-4 py-2 rounded-full whitespace-nowrap shrink-0 transition-all font-semibold cursor-pointer ${
                       isActive
-                        ? 'bg-[#2D2825] text-white shadow-2xs'
-                        : 'bg-white/80 text-[#615449] hover:bg-white hover:text-[#2D2825] border border-[#E7DFD4]'
+                        ? 'bg-[#C83D46] text-white shadow-sm'
+                        : 'bg-white text-[#382820] hover:bg-[#F6D96B] hover:text-[#382820] hover:shadow-xs border border-[#EADFD0]'
                     }`}
                   >
                     {cat.label}
@@ -335,10 +335,10 @@ export default function App() {
             </div>
 
             {/* Secondary Controls: Mood Quick Filters & Sorting */}
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pt-2 border-t border-[#ECE3D7]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pt-2 border-t border-[#EADFD0]">
               {/* Mood Filter Buttons */}
-              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs text-[#6B5D52]">
-                <span className="font-semibold text-[#8C7A6B] mr-1 text-[11px] uppercase tracking-wider">
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs text-[#382820]">
+                <span className="font-bold text-[#586B49] mr-1 text-[11px] uppercase tracking-wider">
                   Vibe:
                 </span>
                 {['Sunny & Bright', 'Soft & Dreamy', 'Romantic & Nostalgic', 'Calm & Earthy', 'Playful & Cheerful'].map((mood) => {
@@ -347,10 +347,10 @@ export default function App() {
                     <button
                       key={mood}
                       onClick={() => setSelectedMood(isCurrent ? null : mood)}
-                      className={`px-2.5 py-1 rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                      className={`px-3 py-1.5 rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer font-medium border ${
                         isCurrent
-                          ? 'bg-[#F2E5DC] text-[#7D3E2C] font-semibold'
-                          : 'hover:bg-[#EFE8DE] text-[#695C51]'
+                          ? 'bg-[#F6D96B] text-[#382820] font-bold border-[#EBCC57] shadow-xs'
+                          : 'bg-white text-[#382820]/80 hover:bg-[#F7E3E3] hover:text-[#C83D46] border-[#EADFD0]'
                       }`}
                     >
                       {mood}
@@ -360,13 +360,13 @@ export default function App() {
               </div>
 
               {/* Sorting Selector */}
-              <div className="flex items-center gap-2 text-xs text-[#6B5D52] self-end sm:self-auto">
-                <ArrowUpDown className="w-3.5 h-3.5 text-[#9E8F82]" />
-                <span className="text-[#8C7A6B]">Sort:</span>
+              <div className="flex items-center gap-2 text-xs text-[#382820] self-end sm:self-auto">
+                <ArrowUpDown className="w-3.5 h-3.5 text-[#C83D46]" />
+                <span className="font-semibold text-[#382820]">Sort:</span>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="bg-white border border-[#DDD3C6] rounded-lg px-2.5 py-1 text-xs text-[#2D2825] focus:outline-none focus:border-[#8F5543]"
+                  className="bg-white border border-[#EADFD0] rounded-lg px-2.5 py-1 text-xs text-[#382820] font-medium cursor-pointer shadow-2xs hover:border-[#C83D46] focus:outline-none focus:border-[#C83D46] transition-colors"
                 >
                   <option value="featured">Most Knotted (Featured)</option>
                   <option value="price-low">Price: Low to High</option>

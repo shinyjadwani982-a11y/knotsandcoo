@@ -44,15 +44,15 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
 
       {/* Slide-over panel */}
       <div className="absolute inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-[#FAF7F2] border-l border-[#E6DCD0] shadow-2xl flex flex-col">
+        <div className="w-screen max-w-md bg-[#FFF8EF] border-l border-[#EADFD0] shadow-2xl flex flex-col">
           {/* Header */}
-          <div className="p-5 border-b border-[#EAE0D3] bg-white/70 flex items-center justify-between">
+          <div className="p-5 border-b border-[#EADFD0] bg-white flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <ShoppingBag className="w-4 h-4 text-[#8F5543]" />
-              <h2 className="text-base font-serif font-medium text-[#26211E]">
+              <ShoppingBag className="w-4 h-4 text-[#C83D46]" />
+              <h2 className="text-base font-serif font-medium text-[#382820]">
                 Your Little Collection ♡
               </h2>
-              <span className="text-xs text-[#8C7A6B] tabular-nums">
+              <span className="text-xs text-[#8E786E] tabular-nums">
                 ({items.reduce((acc, it) => acc + it.quantity, 0)})
               </span>
             </div>
@@ -231,10 +231,10 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({
                 </div>
               </div>
 
-              {/* Checkout CTA */}
+              {/* Checkout CTA - Cherry Red Primary */}
               <button
                 onClick={onProceedToCheckout}
-                className="w-full py-3.5 rounded-2xl bg-[#2D2825] text-white hover:bg-[#433B37] text-xs font-semibold tracking-wide transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="w-full py-3.5 rounded-2xl bg-[#C83D46] text-white hover:bg-[#A92D35] text-xs font-semibold tracking-wide transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
               >
                 <span>Almost yours ♡ Proceed to Checkout</span>
                 <ArrowRight className="w-4 h-4" />
