@@ -81,7 +81,7 @@ export const CustomStudioModal: React.FC<CustomStudioModalProps> = ({
       price: selectedBase.basePrice,
       rating: 5.0,
       reviewCount: 1,
-      image: '/src/assets/images/regenerated_image_1792149856407.png',
+      image: '/assets/images/regenerated_image_1792149856407.png',
       story: `A slow-crafted bespoke piece, hand-knotted by our artisan in ${selectedShade.name} milk-cotton yarn. ${
         monogramText.trim() ? `Custom initial: "${monogramText.trim()}".` : ''
       }`,

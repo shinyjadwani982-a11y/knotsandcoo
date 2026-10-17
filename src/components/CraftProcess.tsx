@@ -14,7 +14,7 @@ export const CraftProcess: React.FC<CraftProcessProps> = ({ onOpenCustomStudio }
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-2xl overflow-hidden border border-[#E6DDD0] shadow-md bg-[#FAF4ED] aspect-[4/3]">
               <img
-                src="/src/assets/images/regenerated_image_1792149856407.png"
+                src="/assets/images/regenerated_image_1792149856407.png"
                 alt="Artisan hands crocheting a floral piece with soft pastel yarn and wooden hook"
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-[1.02]"
                 referrerPolicy="no-referrer"

@@ -83,7 +83,7 @@ export const Hero: React.FC<HeroProps> = ({ onExplore, onOpenQuiz, onOpenCustomS
               {/* Main Image Container */}
               <div className="relative rounded-2xl overflow-hidden border border-[#E4D9CC] shadow-md bg-[#FAF4ED] aspect-[16/10] sm:aspect-[16/10] lg:aspect-[4/3]">
                 <img
-                  src="/src/assets/images/hero_crochet_lifestyle_1792146742852.jpg"
+                  src="/assets/images/hero_crochet_lifestyle_1792146742852.jpg"
                   alt="Young woman walking with a canvas tote styled with Knots & Co daisy and strawberry crochet charms in the golden morning sun"
                   className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
                   referrerPolicy="no-referrer"
